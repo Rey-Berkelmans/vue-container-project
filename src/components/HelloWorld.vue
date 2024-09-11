@@ -12,7 +12,15 @@ export default {
   },
   data() {
     return {
-      theData: {}
+      theData: {},
+      tempData: {},
+      resultSet: [],
+      tempResultSet: [],
+      currentPage: 1,
+      total: 0,
+      imgURL: 'https://media.nfsacollection.net/',
+      query: 'https://api.collection.nfsa.gov.au/search?limit=25&query=',
+      searchString: 'lobby'
     }
   },
   methods: {
