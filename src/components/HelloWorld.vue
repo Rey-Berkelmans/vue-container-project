@@ -26,6 +26,7 @@ export default {
   methods: {
     fetchData() {
       let queryString = this.query + this.searchString + '&page=' + this.currentPage
+      console.log('API call: ' + queryString)
       fetch(queryString)
         .then((response) => {
           response.json().then((res) => {
@@ -42,6 +43,8 @@ export default {
                 this.$data.resultSet = this.$data.tempResultSet
                 this.$data.tempResultSet = []
                 this.currentPage = 1
+                console.log('Pages: ' + Math.ceil(this.$data.total / 25))
+                console.log('finished')
               }
             } else {
               console.log('no results')
