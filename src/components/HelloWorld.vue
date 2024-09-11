@@ -25,13 +25,28 @@ export default {
   },
   methods: {
     fetchData() {
-      // use a piece of dynamic data to modify the API call
-      let query = 'https://api.collection.nfsa.gov.au/search?query=' + this.msg
-      console.log(query)
-      fetch(query)
+      let queryString = this.query + this.searchString + '&page=' + this.currentPage
+      fetch(queryString)
         .then((response) => {
-          // response.json().then(res => console.log(res));
-          response.json().then((res) => (this.$data.theData = res))
+          response.json().then((res) => {
+            this.$data.tempData = { ...this.$data.tempData, ...res }
+            this.$data.tempResultSet = this.$data.tempResultSet.concat(res.results)
+            this.$data.total = res.meta.count.total
+            if (this.$data.total > 0) {
+              if (this.currentPage * 25 < 500 && this.currentPage * 25 < this.$data.total) {
+                this.currentPage++
+                this.fetchData()
+              } else {
+                this.$data.theData = this.$data.tempData
+                this.$data.tempData = {}
+                this.$data.resultSet = this.$data.tempResultSet
+                this.$data.tempResultSet = []
+                this.currentPage = 1
+              }
+            } else {
+              console.log('no results')
+            }
+          })
         })
         .catch((err) => {
           console.error(err)
