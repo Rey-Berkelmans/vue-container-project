@@ -57,17 +57,25 @@ export default {
 </script>
 
 <template>
-  <div class="greetings">
+  <div class="search">
     <h1 class="green">{{ msg }}</h1>
-    <button @click="fetchData">Click Me!</button>
-    <ul class="list-v">
-      <!-- create a variable called result, 
-      loop through the API results and add a list item for each result.
-      Use result to access properties like 'title' and 'name' -->
-      <!-- <li v-for="result in theData.results" :key="result.title">
-        {{ result.title }}
-        {{ result.name }}
-      </li> -->
+
+    <input v-model="searchString" placeholder="query" />
+    <button @click="fetchData">fetch data</button>
+
+    <p>Total: {{ total }}</p>
+
+    <ul role="list" class="list-v">
+      <li v-for="(result, index) in resultSet" :key="result[index]">
+        <p>{{ result['title'] }}</p>
+        <p>{{ result['name'] }}</p>
+        <img
+          v-if="result['preview'] && result['preview'][0]"
+          v-bind:src="imgURL + result['preview'][0]['filePath']"
+          v-bind:alt="result['name']"
+          v-bind:title="result['name']"
+        />
+      </li>
     </ul>
   </div>
 </template>
