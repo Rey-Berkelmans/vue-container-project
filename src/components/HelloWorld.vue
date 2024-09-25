@@ -19,7 +19,7 @@ export default {
       currentPage: 1,
       total: 0,
       imgURL: 'https://media.nfsacollection.net/',
-      query: 'https://api.collection.nfsa.gov.au/search?limit=25&query=',
+      query: 'https://api.collection.nfsa.gov.au/search?limit=25&forms=home%20movie&query=',
       searchString: 'lobby'
     }
   },
