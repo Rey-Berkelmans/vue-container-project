@@ -19,8 +19,8 @@ export default {
       currentPage: 1,
       total: 0,
       imgURL: 'https://media.nfsacollection.net/',
-      query: 'https://api.collection.nfsa.gov.au/search?limit=25&forms=home%20movie&query=',
-      searchString: 'lobby'
+      query: 'https://api.collection.nfsa.gov.au/search?limit=25&hasMedia=yes&query=',
+      searchString: 'Home%20Movie'
     }
   },
   methods: {
@@ -78,6 +78,13 @@ export default {
           v-bind:alt="result['name']"
           v-bind:title="result['name']"
         />
+        <video width="320" height="240" controls>
+          <source
+            v-if="result['preview'] && result['preview'][0]"
+            v-bind:src="imgURL + result['preview'][0]['filePath']"
+            type="video/mp4"
+          />
+        </video>
       </li>
     </ul>
   </div>
