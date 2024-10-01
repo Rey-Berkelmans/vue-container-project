@@ -20,7 +20,7 @@ export default {
       total: 0,
       imgURL: 'https://media.nfsacollection.net/',
       query: 'https://api.collection.nfsa.gov.au/search?limit=25&hasMedia=yes&query=',
-      searchString: 'Home%20Movie'
+      searchString: 'Home Movie'
     }
   },
   methods: {
