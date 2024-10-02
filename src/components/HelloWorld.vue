@@ -10,6 +10,7 @@ export default {
   props: {
     msg: String
   },
+
   data() {
     return {
       theData: {},
@@ -23,6 +24,7 @@ export default {
       searchString: 'Home Movie'
     }
   },
+
   methods: {
     fetchData() {
       let queryString = this.query + this.searchString + '&page=' + this.currentPage
