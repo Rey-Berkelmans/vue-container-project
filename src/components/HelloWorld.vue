@@ -96,6 +96,37 @@ export default {
 </template>
 
 <style scoped>
+.v-enter-from {
+  opacity: 0;
+  translate: -100px 0;
+}
+.v-enter-to {
+  opacity: 1;
+  translate: 0 0;
+}
+.v-leave-from {
+  opacity: 1;
+  translate: 0 0;
+}
+.v-leave-to {
+  opacity: 0;
+  translate: 100px 0;
+}
+img {
+  display: inline-block;
+  max-width: 100%;
+  transition: all 2s;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
 h1 {
   font-weight: 500;
   font-size: 2.6rem;
