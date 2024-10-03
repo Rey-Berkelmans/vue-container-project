@@ -142,13 +142,19 @@ ul li {
 
 ul {
   list-style: none;
-  padding: 0.1rem;
-  justify-content: left;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 ul li {
   display: inline;
-  padding: 20px;
+  max-width: 300px;
+  padding: 0.5rem;
+  border: 1px solid #ffffff33;
 }
 
 h1 {
