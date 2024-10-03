@@ -113,6 +113,18 @@ img {
   display: inline-block;
   max-width: 100%;
   transition: all 2s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+video {
+  display: inline-block;
+  max-width: 100%;
+  transition: all 2s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 ul {
@@ -141,7 +153,7 @@ h3 {
 
 .greetings h1,
 .greetings h3 {
-  text-align: center;
+  text-align: left;
 }
 
 @media (min-width: 1024px) {
