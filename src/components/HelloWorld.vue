@@ -127,7 +127,7 @@ video {
   margin-right: auto;
 }
 
-ul {
+/* ul {
   padding: 0;
   list-style: none;
   display: flex;
@@ -137,6 +137,17 @@ ul {
 }
 
 ul li {
+  padding: 20px;
+} */
+
+ul {
+  list-style: none;
+  padding: 0.1rem;
+  justify-content: left;
+}
+
+ul li {
+  display: inline;
   padding: 20px;
 }
 
