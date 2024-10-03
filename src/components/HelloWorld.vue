@@ -127,19 +127,6 @@ video {
   margin-right: auto;
 }
 
-/* ul {
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: left;
-}
-
-ul li {
-  padding: 20px;
-} */
-
 ul {
   list-style: none;
   padding: 10px;
@@ -152,9 +139,9 @@ ul {
 
 ul li {
   display: inline;
-  max-width: 300px;
-  padding: 0.5rem;
-  border: 1px solid #85bdbf;
+  max-width: 400px;
+  padding: 1rem;
+  border: 3px solid #85bdbf;
   background-color: #000000;
 }
 
