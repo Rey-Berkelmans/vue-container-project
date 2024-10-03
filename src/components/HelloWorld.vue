@@ -154,7 +154,8 @@ ul li {
   display: inline;
   max-width: 300px;
   padding: 0.5rem;
-  border: 1px solid rgb(48, 216, 216);
+  border: 1px solid #85bdbf;
+  background-color: #000000;
 }
 
 h1 {
