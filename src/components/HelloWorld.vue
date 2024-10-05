@@ -159,7 +159,7 @@ ul li {
   display: inline;
   max-width: 400px;
   padding: 1rem;
-  border: 3px solid #85bdbf;
+  border: 4px solid #85bdbf;
   background-color: #000000;
 }
 
