@@ -160,7 +160,7 @@ ul li {
   max-width: 400px;
   padding: 1rem;
   border: 4px solid #85bdbf;
-  background-color: #000000;
+  background-color: #020606;
 }
 
 h1 {
