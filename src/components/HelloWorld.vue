@@ -74,7 +74,7 @@ export default {
       <li v-for="(result, index) in resultSet" :key="result[index]">
         <p>{{ result['title'] }}</p>
         <p>{{ result['name'] }}</p>
-        <img
+        <!-- <img
           v-if="result['preview'] && result['preview'][0]"
           v-bind:src="imgURL + result['preview'][0]['filePath']"
           v-bind:alt="result['name']"
@@ -86,6 +86,24 @@ export default {
             v-bind:src="imgURL + result['preview'][0]['filePath']"
             type="video/mp4"
           />
+        </video> -->
+        <img
+          v-if="
+            result['preview'] && result['preview'][0] && result['preview'][0]['type'] == 'image'
+          "
+          v-bind:src="imgURL + result['preview'][0]['filePath']"
+          v-bind:alt="result['name']"
+          v-bind:title="result['name']"
+        />
+        <video
+          v-if="
+            result['preview'] && result['preview'][0] && result['preview'][0]['type'] == 'video'
+          "
+          width="100%"
+          controls
+        >
+          <source v-bind:src="imgURL + result['preview'][0]['filePath']" type="video/mp4" />
+          Your browser does not support the mp4 type.
         </video>
       </li>
     </ul>
