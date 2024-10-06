@@ -1,3 +1,7 @@
+# Hosted Website
+
+https://rey-berkelmans.github.io/vue-container-project/ 
+
 # Rationale
 
 This project focused on the development of a functional web application utilising dynamic data retrieved through one or more APIs, following a brief for this project/ The design of this functional web application will be based on the prototype completed in Project 1.
